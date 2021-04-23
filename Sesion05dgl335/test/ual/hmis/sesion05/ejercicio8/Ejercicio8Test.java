@@ -1,7 +1,6 @@
 package ual.hmis.sesion05.ejercicio8;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -52,14 +51,14 @@ public class Ejercicio8Test {
 		f.setMaxVehiculos(maxVehiculos);
 		f.setPesoMaxVehiculos(maxPeso);
 		
-		assertTrue(f.embarcarVehiculo(v));
-		assertTrue(f.embarcarVehiculo(v2));
+		assertEquals(f.embarcarVehiculo(v), true);
+		assertEquals(f.embarcarVehiculo(v2), true);
 
 		assertEquals(2, f.getTotalVehiculos());
 		assertEquals(superadoMaxVehiculos, f.superadoMaximoVehiculos()); 
 		
 		assertEquals(superadoMaxPeso, f.superadoMaximoPeso());
-		assertFalse(f.Vacio());
+		assertEquals(f.Vacio(), false);
 		
 	}
 	
@@ -67,7 +66,7 @@ public class Ejercicio8Test {
 	@Test
 	void testVacio() {
 		Ferry f = new Ferry();
-		assertTrue(f.Vacio());
+		assertEquals(f.Vacio(), true);
 	}
 	
 	

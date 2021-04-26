@@ -13,6 +13,7 @@ public class Ejercicio1 {
 			return x;
 		}
 		
+		
 		return resultado;
 	}
 

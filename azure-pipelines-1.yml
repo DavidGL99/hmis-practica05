@@ -27,9 +27,9 @@ steps:
     checkStyleRunAnalysis: true
     pmdRunAnalysis: true
     findBugsRunAnalysis: true
+
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: 
-    pathToSources: '$(System.DefaultWorkingDirectory)/src/ual/hmis/sesion05'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/site/jacoco'
+    summaryFileLocation: '**/surefire-reports/TEST-*.xml'
+    failIfCoverageEmpty: true'
